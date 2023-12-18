@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Aprēķināt peļņu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dropdown-container">
+    <label for="books">Izvēlies grāmatu:</label>
+    <select id="books" name="books">
+      <option value="" disabled selected>Izvēlies grāmatu</option>
+      <option value="G1">G1</option>
+      <option value="G2">G2</option>
+      <option value="G3">G3</option>
+    </select>
+
+    <label for="cover">Vāks:</label>
+    <select id="cover" name="cover">
+      <option value="" disabled selected>Izvēlies vāku</option>
+      <option value="Mīkstie">Mīkstie vāki</option>
+      <option value="Cietie">Cietie vāki</option>
+    </select>
+
+    <label for="volume">Apjoms:</label>
+    <select id="volume" name="volume">
+      <option value="" disabled selected>Izvēlies apjomu</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+      <option value="200">200</option>
+      <option value="500">500</option>
+    </select>
+
+    <button id="calculate-button">Aprēķināt peļņu</button>
+  </div>
+
+  <div class="result-table" id="result-table" style="display: none;">
+    <table id="result">
+      <caption>Izvēlētie dati un peļņa</caption>
+      <thead>
+        <tr>
+          <th>Izvēlētā grāmata</th>
+          <th>Vāks</th>
+          <th>Apjoms</th>
+          <th>Peļna</th>
+        </tr>
+      </thead>
+      <tbody id="result-body">
+        <!-- Šeit būs datu ievade, kas tiek izvadīta pēc pogas noklikšķināšanas -->
+      </tbody>
+    </table>
+  </div>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.dropdown-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: grey;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.result-table {
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+</style>
+  <script src="script.js"></script>
+
+</body>
+</html>
